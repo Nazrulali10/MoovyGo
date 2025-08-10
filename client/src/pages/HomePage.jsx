@@ -20,7 +20,7 @@ const [filteredMovies,setFilteredMovies] = useState([])
   },[searchQuery,movies])
  
   return (
-    <div className='w-full h-auto md:px-15 px-6 bg-white'>
+    <div className='w-full h-auto md:px-22 px-8 bg-white'>
 
       <div className='flex w-full justify-center items-center mt-10'>
       <div  className='flex flex-col mb-15 '>
@@ -32,11 +32,11 @@ const [filteredMovies,setFilteredMovies] = useState([])
       
         <div>
           {!homeLoading?
-      <div className='gap-2 md:gap-12 flex flex-wrap w-full px-0 md:px-15 '>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-16'>
       {filteredMovies.map((movie,i)=>(
-         <div key={i}>
-        <MovieCard movie={movie}/>
-         </div>
+         
+        <MovieCard key={i} movie={movie}/>
+         
       ))}
      </div>:
       <div className='gap-5 md:gap-12 flex flex-wrap w-full px-0 md:px-15'>
