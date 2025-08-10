@@ -32,7 +32,7 @@ const [filteredMovies,setFilteredMovies] = useState([])
       
         <div>
           {!homeLoading?
-      <div className='gap-5 md:gap-12 flex flex-wrap w-full px-0 md:px-15 '>
+      <div className='gap-2 md:gap-12 flex flex-wrap w-full px-0 md:px-15 '>
       {filteredMovies.map((movie,i)=>(
          <div key={i}>
         <MovieCard movie={movie}/>
