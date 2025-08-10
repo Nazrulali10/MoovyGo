@@ -2,7 +2,7 @@
 import { Route, Routes, useLocation } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import NavigationBar from "./components/NavigationBar"
-import Footer from "./components/footer"
+import Footer from "./components/Footer"
 import ShowDetails from "./pages/ShowDetails"
 import SelectSeat from "./pages/SelectSeat"
 import Ticket from "./pages/TIcket"
