@@ -39,7 +39,7 @@ const [filteredMovies,setFilteredMovies] = useState([])
          
       ))}
      </div>:
-      <div className='gap-5 md:gap-12 flex flex-wrap w-full px-0 md:px-15'>
+      <div className='md:px-15 px-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10'>
         {
           [...Array(8)].map((_,i)=>(
             <CardSkeleton key={i} />
