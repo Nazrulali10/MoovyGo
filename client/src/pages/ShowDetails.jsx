@@ -43,7 +43,7 @@ const ShowDetails = () => {
         {movie.cast.map((item,i)=>(
           <div key={i} className='flex md:w-full w-18 flex-col items-center '>
           <img  className='flex rounded-full h-15 w-15 md:h-30 md:w-30 object-cover object-center border border-gray-400' src={item}/>
-          <p  className='flex text-xs md:text-sm'>{movie.castnames[i]}</p>
+          <p  className='flex text-[8px] md:text-sm'>{movie.castnames[i]}</p>
           </div>
         ))}
         
