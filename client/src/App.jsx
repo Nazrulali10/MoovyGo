@@ -34,7 +34,9 @@ const App = () => {
   return (
     <div>
     {isOwner?null:<NavigationBar/>}
-    <Toaster/>
+    <Toaster position="top-center" 
+    containerStyle={{top: '16px',}}/>
+
     {showLogin?<Login/> :null}
     {showAnimation && <SuccessAnimation/>}
     <ScrollToTop/>
