@@ -6,7 +6,7 @@ const bookingsSchema = new mongoose.Schema({
     screen:{type:String,required:true},
     seats:{type:[String],required:true},
     ticketPrice:{type:Number,required:true},
-    date:{type:Date,required:true},
+    date:{type:String,required:true},
     time:{type:String,required:true},
     bookedtime:{type:String,default:Date.now}
 })
