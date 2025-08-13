@@ -96,7 +96,7 @@ const AddMovie = () => {
         onSubmit={handleSubmit}
         className="flex flex-col w-2/4 h-[950px] px-10 py-8 mt-10 gap-8 border mb-5"
       >
-        {/* Movie name + Genre */}
+       
         <div className="flex gap-4 w-full">
           <div className="flex flex-col gap-1">
             <p className=" text-sm">Movie</p>
@@ -123,7 +123,7 @@ const AddMovie = () => {
           </div>
         </div>
 
-        {/* Movie posters */}
+        
         <div className="flex flex-col border rounded-md p-4 items-center border-red-600">
           <p className="text-sm flex ">Upload Movie posters</p>
           <div className="flex gap-4 mt-3">
@@ -178,7 +178,7 @@ const AddMovie = () => {
           </div>
         </div>
 
-        {/* Multiple Show Times */}
+        
         <div className="flex gap-2">
           {showTimes.map((time, i) => (
             <div key={i} className="flex flex-col gap-2 items-center">
@@ -223,7 +223,7 @@ const AddMovie = () => {
           )}
         </div>
 
-        {/* Movie description */}
+        
         <textarea
           onChange={(e) => setDescription(e.target.value)}
           className="w-full h-15 border rounded-md p-2 focus:outline-none text-xs flex-1  border-red-600"
@@ -232,7 +232,7 @@ const AddMovie = () => {
           cols={10}
         />
 
-        {/* Movie Cast Uploads */}
+        
         <div className="flex flex-col">
           <p className=" text-sm">Upload images and enter names of movie cast</p>
           <div className="flex gap-5 mt-2 justify-center border rounded-md p-4  border-red-600">
@@ -288,7 +288,7 @@ const AddMovie = () => {
             <p className="ml-1 flex">-/-</p>
           </div>
 
-        {/* Submit Button */}
+       
         <div className="w-full flex justify-center">
           <button
           disabled={isConfirming}

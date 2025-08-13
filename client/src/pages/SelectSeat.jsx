@@ -51,7 +51,7 @@ const SelectSeat = () => {
     
   };
   return (
-    <div className="w-full h-auto flex flex-col px-10 md:px-30 ">
+    <div className="w-full h-auto flex flex-col px-10 md:px-30 overflow-x-hidden">
 
       <div className="w-full flex justify-center items-center pt-10 mb-10">
       <div className="flex flex-col w-30 md:w-43">
