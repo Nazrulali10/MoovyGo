@@ -20,12 +20,40 @@ const ShowDetails = () => {
     <div className='w-full px-5 md:px-35'>
       <div className='flex flex-col gap-4 mb-5 md:mb-40'>
 
-      <div className='w-full h-40 md:h-70'><img className='w-full object-cover h-40 md:h-70' src={movie.image[1]} alt={movie.name}/></div>
-      
+      {/* <div className='relative w-full'>
+       <img className='absolute inset-0 w-full h-80 filter brightness-50 blur-md z-0' src={movie.image[0]} />
+
+       <div className='z-10'>
+        <img className='w-full object-cover h-40 md:h-70' src={movie.image[1]} alt={movie.name}/>
+       
       <div className='flex flex-col gap-1 w-full  '>
         <p className='text-xl md:text-3xl text-black font-semibold'>{movie.name}</p>
         <p className='font-semibold text-sm md:text-base'>{movie.time.year}</p>
         <p className='text-gray-500 text-sm'>{movie.genre}</p>
+      </div>
+      </div>
+       </div> */}
+       <div className='relative w-full h-[300px] md:h-[400px]'>
+       
+        <img
+          src={movie.image[0]}
+          className='absolute inset-0 w-full h-full object-cover filter brightness-30 z-0'
+          alt='Background'
+        />
+
+       
+        <div className='relative z-10 flex flex-col items-center justify-end h-full px-4 pb-6 md:pb-10'>
+     
+          <img
+            src={movie.image[1]}
+            alt={movie.name}
+            className='w-full h-40 md:w-44 md:h-64 object-cover rounded-xl shadow-lg '
+          />
+          
+          <p className='text-white font-semibold text-xl md:text-3xl mt-4'>{movie.name}</p>
+          <p className='text-white text-sm md:text-base'>{movie.time.year}</p>
+          <p className='text-gray-300 text-sm'>{movie.genre}</p>
+        </div>
       </div>
 
       <div className='flex flex-col mt-5'>
@@ -34,16 +62,16 @@ const ShowDetails = () => {
       </div>
 
       <div>
-        <p className='text-xl md:text-3xl text-black font-semibold mt-10'>Cast</p>
+        <p className='text-2xl md:text-3xl text-black font-semibold mt-10'>Cast</p>
       </div>
 
       <div className='flex '>
         
-      <div className='flex md:px-30 items-center w-full justify-between  ' >
+      <div className='grid grid-cols-2 md:grid-cols-5 md:px-30 items-center w-full justify-between gap-1' >
         {movie.cast.map((item,i)=>(
-          <div key={i} className='flex md:w-full w-18 flex-col items-center '>
-          <img  className='flex rounded-full h-15 w-15 md:h-30 md:w-30 object-cover object-center border border-gray-400' src={item}/>
-          <p  className='flex text-[8px] md:text-sm'>{movie.castnames[i]}</p>
+          <div key={i} className='flex w-full flex-col items-center '>
+          <img  className='flex rounded-full h-30 w-30 object-cover object-center border border-gray-400' src={item}/>
+          <p  className='flex text-xs md:text-sm'>{movie.castnames[i]}</p>
           </div>
         ))}
         
@@ -53,7 +81,7 @@ const ShowDetails = () => {
       </div>
 
       <div className='w-full flex items-center justify-center mt-10'>
-        <button onClick={handleClick} className='text-white text-xs md:text-base bg-red-500 rounded-xl px-6 py-2 md:px-12 md:py-3 hover:bg-red-600 transition-colors transform duration-300'>Select seats</button>
+        <button onClick={handleClick} className='text-white text-sm md:text-base bg-red-500 rounded-xl px-7 py-3 md:px-12 md:py-3 hover:bg-red-600 transition-colors transform duration-300'>Select seats</button>
       </div>
     </div>
     </div>
