@@ -55,7 +55,7 @@ const SelectSeat = () => {
 
       <div className="w-full flex justify-center items-center pt-10 mb-10">
       <div className="flex flex-col w-30 md:w-43">
-        <h1 className="text-xl md:text-3xl text-black font-semibold">Select Seats</h1>
+        <h1 className="text-xl md:text-3xl text-black font-medium">Select Seats</h1>
         <div className="w-full h-0.5 mt-1 rounded-full bg-red-500"></div>
       </div>
       </div>
@@ -89,11 +89,11 @@ const SelectSeat = () => {
       </div>
 
 
-      <div className="flex flex-col h-20 justify-center font-semibold mt-4 w-100 gap-5 text-sm">
+      <div className="flex flex-col h-20 justify-center mt-4 w-full md:w-100 gap-5 text-sm">
         <p>Date : {generateDate({movie})}</p>
-        <div className="flex gap-2 text-xs md:text-base items-center">
+        <div className="flex gap-2 text-sm md:text-base items-center">
           
-          <p className="font-semibold">Select show time</p>
+          <p >Select show time</p>
           <select
             className="focus:outline-none border border-red-500 text-xs px-4 py-1 rounded-lg"
             onChange={(e) => setSelectedShow(e.target.value)}
@@ -107,16 +107,17 @@ const SelectSeat = () => {
           </select>
         </div>
 
-        <div className="flex w-full items-center text-xs md:text-base">
+        <div className="flex w-full items-center text-sm md:text-base">
           Ticket price :<p className="text-red-500 pl-2">{currency}{ticketPrice()}/-</p>
         </div>
-
+        <div className="flex justify-center w-full">
          <button
           onClick={handleClick}
-          className="text-white bg-red-500 rounded-xl px-2 mdpx-7 w-30 md:w-full py-2 md:py-3 text-xs md:text-base hover:bg-red-600 transition-colors transform duration-300"
+          className="text-white bg-red-500 rounded-xl px-3 md:px-7 w-30 md:w-full py-3 md:py-3 text-sm md:text-base hover:bg-red-600 transition-colors transform duration-300"
         >
           Confirm seats
         </button>
+        </div>
       </div>
 
 

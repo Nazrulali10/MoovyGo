@@ -37,7 +37,7 @@ const Seat = ({number,isAvailable}) => {
   return (
    
     <div onClick={handleClick} className={`md:h-5 md:w-4  md:p-4 p-1 flex items-center justify-center cursor-pointer ${generateColour()}`}>
-       <p className='text-xs md:text-base'>{number}</p> 
+       <p className='text-xs md:text-sm'>{number}</p> 
         </div>
   )
 }

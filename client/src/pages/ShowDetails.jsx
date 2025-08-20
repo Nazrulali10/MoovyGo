@@ -20,19 +20,7 @@ const ShowDetails = () => {
     <div className='w-full px-5 md:px-35'>
       <div className='flex flex-col gap-4 mb-5 md:mb-40'>
 
-      {/* <div className='relative w-full'>
-       <img className='absolute inset-0 w-full h-80 filter brightness-50 blur-md z-0' src={movie.image[0]} />
-
-       <div className='z-10'>
-        <img className='w-full object-cover h-40 md:h-70' src={movie.image[1]} alt={movie.name}/>
-       
-      <div className='flex flex-col gap-1 w-full  '>
-        <p className='text-xl md:text-3xl text-black font-semibold'>{movie.name}</p>
-        <p className='font-semibold text-sm md:text-base'>{movie.time.year}</p>
-        <p className='text-gray-500 text-sm'>{movie.genre}</p>
-      </div>
-      </div>
-       </div> */}
+    
        <div className='relative w-full h-[300px] md:h-[400px]'>
        
         <img
@@ -47,7 +35,7 @@ const ShowDetails = () => {
           <img
             src={movie.image[1]}
             alt={movie.name}
-            className='w-full h-40 md:w-44 md:h-64 object-cover rounded-xl shadow-lg '
+            className='w-full h-40 md:w-60 md:h-64 object-cover rounded-xl shadow-lg '
           />
           
           <p className='text-white font-semibold text-xl md:text-3xl mt-4'>{movie.name}</p>

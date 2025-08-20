@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard'
 import { useAppContext } from '../context/AppContext'
 import CardSkeleton from '../components/CardSkeleton'
+import Slider from '../components/Slider'
 
 
 
@@ -21,6 +22,11 @@ const [filteredMovies,setFilteredMovies] = useState([])
  
   return (
     <div className='w-full h-auto md:px-15 bg-white'>
+      {!homeLoading?
+      <div className='px-2'>
+        <Slider/>
+      </div>
+      :null}
 
       <div className='flex w-full justify-center items-center mt-10 px-4'>
       <div  className='flex flex-col mb-15 '>
@@ -32,7 +38,7 @@ const [filteredMovies,setFilteredMovies] = useState([])
       
         <div>
           {!homeLoading?
-      <div className='md:px-15 px-5 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-10'>
+      <div className='md:px-15 px-5 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8'>
       {filteredMovies.map((movie,i)=>(
          
         <MovieCard key={i} movie={movie}/>
