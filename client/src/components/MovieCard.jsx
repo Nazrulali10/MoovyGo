@@ -10,7 +10,7 @@ const MovieCard = ({movie}) => {
 
   return (
     <div onClick={()=>{Navigate(`/showdetails/${movie._id}`)}} className='relative h-auto w-42 md:h-110 md:w-70 bg-gray-50 border border-gray-500  shadow-md cursor-pointer hover:scale-105 rounded-lg'>
-        <div><img src={movie.image[0]} alt={movie.name} className='h-60 md:h-90 w-full object-cover transition-transform duration-300 ease-in-out rounded-lg' /></div>
+        <div><img src={movie.image[0]} alt={movie.name} className='h-60 md:h-90 w-full object-cover transition-transform duration-300 ease-in-out' /></div>
 
         <div className='px-3 py-2 md:px-5 md:py-4 flex flex-col gap-1'>
        
