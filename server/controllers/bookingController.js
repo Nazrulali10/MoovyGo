@@ -22,12 +22,13 @@ const Movies = require("../models/Movies")
         const bookingData = req.body;
 
         // 1. Find the movie by name
+         console.log("Incoming booking data:", bookingData);
         const movie = await Movies.findOne({ name: bookingData.moviename });
-
+         console.log("Movie not found");
         if (!movie) {
             return res.json({ success: false, message: "Movie not found" });
         }
-
+         console.log("Movie found:", movie.name);
         // 2. Update seat availability
         const updatedSeats = movie.seats.map(seat => {
             if (bookingData.seats.includes(seat.number)) {

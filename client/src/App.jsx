@@ -32,7 +32,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className="font-display">
     {isOwner?null:<NavigationBar/>}
     <Toaster position="top-center" 
     containerStyle={{top: '16px',}}/>
