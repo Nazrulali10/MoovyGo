@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppContext } from '../context/AppContext'
 import toast from 'react-hot-toast'
+import MovieCard from '../components/MovieCard'
 
 const ShowDetails = () => {
     const {id} = useParams()
@@ -45,12 +46,12 @@ const ShowDetails = () => {
       </div>
 
       <div className='flex flex-col mt-5'>
-      <p className='text-base md:text-lg text-red-500 font-normal'>About movie :</p>
-      <p className='text-gray-600 text-xs md:text-sm mt-1'>{movie.description}</p>
+      <p className='text-base font-medium md:text-lg text-red-500 dark:text-red-600 '>About movie :</p>
+      <p className='text-gray-600 dark:text-gray-400 text-xs md:text-sm mt-1'>{movie.description}</p>
       </div>
 
       <div>
-        <p className='text-2xl md:text-3xl text-black font-semibold mt-10'>Cast</p>
+        <p className='text-2xl md:text-3xl text-black dark:text-white font-semibold mt-10'>Cast</p>
       </div>
 
       <div className='flex '>
@@ -58,8 +59,8 @@ const ShowDetails = () => {
       <div className='grid grid-cols-2 md:grid-cols-5 md:px-30 items-center w-full justify-between gap-1' >
         {movie.cast.map((item,i)=>(
           <div key={i} className='flex w-full flex-col items-center '>
-          <img  className='flex rounded-full h-30 w-30 object-cover object-center border border-gray-400' src={item}/>
-          <p  className='flex text-xs md:text-sm'>{movie.castnames[i]}</p>
+          <img  className='flex rounded-full h-30 w-30 object-cover object-center border border-gray-400 dark:border-none' src={item}/>
+          <p  className='flex text-xs md:text-sm dark:text-white text-black'>{movie.castnames[i]}</p>
           </div>
         ))}
         
@@ -69,7 +70,17 @@ const ShowDetails = () => {
       </div>
 
       <div className='w-full flex items-center justify-center mt-10'>
-        <button onClick={handleClick} className='text-white text-sm md:text-base bg-red-500 rounded-xl px-7 py-3 md:px-12 md:py-3 hover:bg-red-600 transition-colors transform duration-300'>Select seats</button>
+        <button onClick={handleClick} className='text-white text-sm md:text-base bg-red-600 rounded-xl px-7 py-3 md:px-12 md:py-3 hover:bg-red-600 transition-colors transform duration-300'>Select seats</button>
+      </div>
+      <div>
+        <p className='text-2xl md:text-3xl flex font-bold mt-10 text-black dark:text-white'>Similiar Movies</p>
+      </div>
+      <div className='grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 md:mt-3 mt-0'>
+        {
+          movies.filter((FilteredMovies)=>FilteredMovies.genre===movie.genre).slice(0,5).map((item,i)=>(
+            <MovieCard key={i} movie={item} />
+          ))
+        }
       </div>
     </div>
     </div>

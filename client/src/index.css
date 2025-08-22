@@ -2,6 +2,8 @@
 @import 'tailwindcss';
 @import 'react-loading-skeleton/dist/skeleton.css';
  
+
+
 @theme {
     --font-display:"Ubuntu", sans-serif;
 }

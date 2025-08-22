@@ -5,9 +5,9 @@ const Seat = ({number,isAvailable}) => {
     const [isSelected,setIsSelected] = useState(false)
     const {setSelectedSeats} = useAppContext()
     const generateColour = () =>{
-        if(!isAvailable) return 'bg-red-400'
-        if(isSelected) return 'bg-yellow-200'
-        return 'bg-green-200'
+        if(!isAvailable) return 'bg-red-400 dark:bg-red-600'
+        if(isSelected) return 'bg-yellow-200 '
+        return 'bg-green-200 dark:bg-green-400'
     }
     // const handleClick = ()=> {
     //     if(!isAvailable){

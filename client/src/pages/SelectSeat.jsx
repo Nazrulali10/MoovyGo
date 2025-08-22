@@ -55,26 +55,26 @@ const SelectSeat = () => {
 
       <div className="w-full flex justify-center items-center pt-10 mb-10">
       <div className="flex flex-col w-30 md:w-43">
-        <h1 className="text-xl md:text-3xl text-black font-medium">Select Seats</h1>
+        <h1 className="text-xl md:text-3xl text-black dark:text-white font-medium">Select Seats</h1>
         <div className="w-full h-0.5 mt-1 rounded-full bg-red-500"></div>
       </div>
       </div>
 
       <div className="flex md:flex-row flex-col md:mb-0 mb-10">
-      <div className="w-90">
+      <div className="w-90  text-black dark:text-white">
       <p className="text-xl md:text-3xl font-semibold flex">{movie.name} {movie.time.year}</p>
-      <div className="flex flex-col mt-5 gap-1">
+      <div className="flex flex-col mt-5 gap-1 ">
         <div className="flex h-4 w-25 items-center justify-between">
           <p className="text-xs ">Available</p>{" "}
-          <div className="w-3 h-3 bg-green-200"></div>
+          <div className="w-3 h-3 bg-green-200 dark:bg-green-400"></div>
         </div>
         <div className="flex h-4 w-25 items-center justify-between">
           <p className="text-xs">not Available</p>{" "}
-          <div className="w-3 h-3 bg-red-400"></div>
+          <div className="w-3 h-3 bg-red-400 dark:bg-red-600"></div>
         </div>
         <div className="flex h-4 w-25 items-center justify-between">
           <p className="text-xs">Selected seats</p>{" "}
-          <div className="w-3 h-3 bg-yellow-200"></div>
+          <div className="w-3 h-3 bg-yellow-200 "></div>
         </div>
       </div>
       </div>
@@ -85,11 +85,11 @@ const SelectSeat = () => {
             <Seat key={i} number={item.number} isAvailable={item.isAvailable} />
           ))}
         </div>
-        <div className="mt-5 flex w-40 md:w-[500px] h-4 bg-gray-300 rounded-full"></div>
+        <div className="mt-5 flex w-40 md:w-[500px] h-4 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
       </div>
 
 
-      <div className="flex flex-col h-20 justify-center mt-4 w-full md:w-100 gap-5 text-sm">
+      <div className="flex flex-col h-20 justify-center mt-4 w-full md:w-100 gap-5 text-sm  text-black dark:text-white">
         <p>Date : {generateDate({movie})}</p>
         <div className="flex gap-2 text-sm md:text-base items-center">
           
@@ -100,7 +100,7 @@ const SelectSeat = () => {
           >
             <option value="" hidden className="text-xs hover:bg-red-400">choose</option>
             {movie.time.showTime.map((show, i) => (
-              <option className="text-xs hover:bg-red-400" key={i} value={show}>
+              <option className="text-xs hover:bg-red-400 dark:bg-neutral-950 bg-white" key={i} value={show}>
                 {show}
               </option>
             ))}
@@ -108,12 +108,12 @@ const SelectSeat = () => {
         </div>
 
         <div className="flex w-full items-center text-sm md:text-base">
-          Ticket price :<p className="text-red-500 pl-2">{currency}{ticketPrice()}/-</p>
+          Ticket price :<p className="text-green-500 pl-2">{currency}{ticketPrice()}/-</p>
         </div>
         <div className="flex justify-center w-full">
          <button
           onClick={handleClick}
-          className="text-white bg-red-500 rounded-xl px-3 md:px-7 w-30 md:w-full py-3 md:py-3 text-sm md:text-base hover:bg-red-600 transition-colors transform duration-300"
+          className="text-white bg-red-500 dark:bg-red-600 rounded-xl px-3 md:px-7 w-30 md:w-full py-3 md:py-3 text-sm md:text-base hover:bg-red-600 transition-colors transform duration-300"
         >
           Confirm seats
         </button>

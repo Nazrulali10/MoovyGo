@@ -91,10 +91,10 @@ const AddMovie = () => {
   };
 
   return (
-    <div className="flex w-full h-full overflow-y-auto px-15 ">
+    <div className="flex w-full h-full overflow-y-auto px-15 dark:text-white">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-2/4 h-[950px] px-10 py-8 mt-10 gap-8 border mb-5"
+        className="flex flex-col w-2/4 h-[950px] px-10 py-8 mt-10 gap-8 border border-gray-400 dark:border-white mb-5"
       >
        
         <div className="flex gap-4 w-full">

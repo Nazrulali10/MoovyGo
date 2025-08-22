@@ -35,10 +35,10 @@ const Ticket = () => {
   };
 
   return (
-    <div className="h-auto flex flex-col md:flex-row w-full justify-center items-center mb-10 md:mt-0 mt-10">
-      <div className="w-full md:w-1/2 flex justify-center items-center flex-col gap-1 md:py-0 md:mb-0 mb-10">
-        <p className="text-2xl md:text-4xl">Thanks for Booking</p>
-        <p className="text-xs md:text-sm text-red-500">Click the ticket to download !!</p>
+    <div className="h-auto flex flex-col md:flex-row w-full justify-center items-center mb-10 md:mt-0 mt-10 ">
+      <div className="w-full md:w-1/2 flex justify-center items-center flex-col gap-1 md:py-0 md:mb-0 mb-10 text-black dark:text-white">
+        <p className="text-2xl md:text-4xl ">Thanks for Booking</p>
+        <p className="text-xs md:text-sm text-red-500 dark:text-red-600">Click the ticket to download !!</p>
       </div>
 
       <div
