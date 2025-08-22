@@ -28,11 +28,11 @@ const HomePage = () => {
         </div>
       ) : <BannerSkeleton/>}
 
-      <div className="flex w-full justify-center items-center mt-5 md:mt-20 px-4">
+      <div className="flex w-full justify-center items-center mt-10 md:mt-20 px-4">
         <div className="flex flex-col mb-8 ">
-          <div className="text-2xl md:text-3xl font-bold dark:text-white text-black">
+          <div className="text-xl md:text-3xl font-bold dark:text-white text-black">
             Book Tickets Now
-            <div className="w-full h-0.5 rounded-full bg-red-500 mt-2"></div>
+            <div className="w-full h-0.5 rounded-full bg-red-500 mt-1 md:mt-2"></div>
           </div>
         </div>
       </div>
