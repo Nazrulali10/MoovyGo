@@ -33,7 +33,7 @@ const Slider = () => {
         }
         </div>
         <div className='absolute flex justify-center w-full h-full items-end pb-8'>
-            <button onClick={() => window.scrollBy({ top: 450, behavior: 'smooth' })} className='z-20 text-white border border-white rounded-xl px-5 py-2 hover:bg-red-600 transition duration-300 hover:border-none'>Explore</button>
+            <button onClick={() => window.scrollBy({ top: 380, behavior: 'smooth' })} className='z-20 text-white border border-white rounded-xl px-5 py-2 hover:bg-red-600 transition duration-300 hover:border-none'>Explore</button>
         </div>
 
     </div>
