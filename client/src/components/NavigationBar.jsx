@@ -49,7 +49,22 @@ const NavigationBar = () => {
           <div className="hidden md:flex">
             <ToggleTheme />
           </div>
-         
+         {authUser ? (
+            <button
+              onClick={handleclick}
+              className="w-18 flex rounded-full border border-gray-400 px-4 md:px-6 py-2 text-black text-xs md:text-sm dark:text-white  dark:hover:bg-white dark:hover:text-black transition duration-300"
+            >
+              Logout
+            </button>
+           
+          ) : (
+            <button
+              onClick={() => setShowLogin(true)}
+              className="flex w-18 rounded-full border border-gray-400 px-4 md:px-6 py-2 text-black text-xs md:text-sm dark:text-white dark:hover:bg-white dark:hover:text-black transition duration-300"
+            >
+              Login
+            </button>
+          )}
         </div>
 
         <div className="flex items-center md:gap-0 gap-2">
