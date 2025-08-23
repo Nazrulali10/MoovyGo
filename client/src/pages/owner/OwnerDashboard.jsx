@@ -39,7 +39,7 @@ const OwnerDashboard = () => {
 
   return (
     <div className='w-full h-screen overflow-y-auto'>
-        <nav className='flex w-full h-24 border-b border-b-gray-400 justify-center items-center'><img className='h-40 w-60 object-contain' src='/icon.png' alt='icon'/></nav>
+        <nav className='flex w-full h-24 border-b border-b-gray-400 justify-center items-center'><div className='bg-white rounded-full'><img className='h-11  object-contain p-1' src='/icon.png' alt='icon'/></div></nav>
         <div className='flex h-[640px]'>
             <div className='w-1/6 flex flex-col border-r border-r-gray-400 h-full items-center'>
             {sideBar.map((item,i)=>(
@@ -49,7 +49,7 @@ const OwnerDashboard = () => {
     to={`/owner${item.path}`}
     className={({ isActive }) =>
       `border-b border-b-gray-400 w-full flex items-center justify-center px-4 py-3 text-sm  focus:outline-none 
-       ${isActive ? 'bg-red-500 text-white' : 'bg-white text-black'}`
+       ${isActive ? 'bg-red-500 dark:bg-red-600 text-white' : 'bg-white dark:bg-neutral-950 dark:text-white text-black'}`
     }
     end={item.path === ''}
   >
@@ -58,7 +58,7 @@ const OwnerDashboard = () => {
 </div>
 
             ))}
-            <button onClick={handleLogout} className='flex rounded-full border px-4 py-2 bg-red-500 w-2/4 text-white justify-center mt-4 text-xs font-medium  hover:bg-red-600 transition-colors transform duration-300'>Logout</button>
+            <button onClick={handleLogout} className='flex rounded-full px-4 py-2 bg-red-500 dark:bg-red-600 border-none w-2/4 text-white justify-center mt-4 text-xs font-medium  hover:bg-red-600  transition-colors transform duration-300'>Logout</button>
             
             </div>
             <div className='w-full'>

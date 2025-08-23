@@ -292,7 +292,7 @@ const AddMovie = () => {
         <div className="w-full flex justify-center">
           <button
           disabled={isConfirming}
-            className={` text-white rounded-full py-2 px-6 w-60  text-sm ${isConfirming?'bg-red-600':'bg-red-500'}`}
+            className={` text-white rounded-full py-2 px-6 w-60  text-sm ${isConfirming?'bg-red-600 dark:bg-red-700':'bg-red-500 dark:bg-red-600'}`}
            
           >
             {isConfirming?'Adding Movie...':"Submit Movie"}

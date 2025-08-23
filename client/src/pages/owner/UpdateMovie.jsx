@@ -34,7 +34,7 @@ const UpdateMovie = () => {
       {movies?.map((movie,i)=>(
         <div key={i} className='flex border border-gray-400 p-2 w-full rounded-md '>
           <div className='flex items-center'><img className='w-40 h-55 object-contain rounded-md' src={movie.image[0]} alt={movie.name}/></div>
-          <div className='flex flex-col w-180 p-10 gap-2 text-sm text-gray-500 font-semibold'>
+          <div className='flex flex-col w-180 p-10 gap-2 text-sm text-gray-500 dark:text-white '>
             <p>Movie : {movie.name} {movie.time.year}</p>
             <p>Ticket Price : {currency}{movie.ticketPrice}/-</p>
             <p>Date : {movie.time.date}</p>
@@ -44,7 +44,7 @@ const UpdateMovie = () => {
               </p>
           </div>
           
-          <div onClick={()=>removeItem(movie._id)} className='flex items-center text-red-600'>
+          <div onClick={()=>removeItem(movie._id)} className='flex items-center text-red-600 dark:text-white'>
             
             <X />
           </div>

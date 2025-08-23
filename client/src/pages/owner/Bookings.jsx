@@ -36,10 +36,10 @@ const Bookings = () => {
   return (
     <div className='flex flex-col w-full h-full py-3 px-30 gap-5 overflow-y-auto'>
       <div className='flex w-full items-center justify-center h-30'>
-     <input onChange={(e)=>setOwnerSearch(e.target.value)}  type='text' placeholder='Search by name...' className='w-80 py-2 rounded-full border px-5 caret-red-500'/>
+     <input onChange={(e)=>setOwnerSearch(e.target.value)}  type='text' placeholder='Search by name...' className='w-80 py-2 rounded-full border dark:border-white dark:text-white px-5 caret-red-500'/>
       </div>
       {filteredBookings.map((item,i)=>(
-        <div key={i} className='flex border border-gray-400 px-8 py-3 w-full text-xs rounded-md gap-10 items-center hover:border-red-500 '>
+        <div key={i} className='flex border border-gray-400 px-8 py-3 w-full text-xs rounded-md gap-10 items-center hover:border-red-500 dark:bg-gray-100 '>
           <div className='flex'>
             <img className='h-13 w-13' src='/images/bookingsdefault.png' />
           </div>
